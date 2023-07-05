@@ -1,20 +1,11 @@
-import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { CText, Switch } from '@/Components'
+import Navigation from '@/Navigation'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <CText>CText</CText>
-      <Switch />
-    </View>
+    <SafeAreaProvider>
+      <Navigation />
+    </SafeAreaProvider>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-})

@@ -1,17 +1,18 @@
-import { StyleSheet, Text, View, TextProps } from 'react-native'
+import { StyleSheet, Text, TextProps } from 'react-native'
 import React from 'react'
 
-interface Props extends TextProps {}
-
-const CText: React.FC<Props> = props => {
-  const { children } = props
-  return (
-    <View>
-      <Text>{children}</Text>
-    </View>
-  )
+interface Props extends TextProps {
+  color?: string
 }
 
-const styles = StyleSheet.create({})
+const CText: React.FC<Props> = props => {
+  const { color, children, ...restProps } = props
+
+  return (
+    <Text style={{ color: color, fontSize: 14 }} {...restProps}>
+      {children}
+    </Text>
+  )
+}
 
 export default CText
