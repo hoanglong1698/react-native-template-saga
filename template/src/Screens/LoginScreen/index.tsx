@@ -1,12 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { CButton } from '@/Components'
+import { SCREENS_NAME } from '@/Constants'
+import { reset } from '@/Utils'
 
 export default function LoginScreen() {
   return (
     <View style={styles.container}>
       <Text>LoginScreen</Text>
-      <CButton title="Login" />
+      <CButton title="Login" onPress={() => reset(SCREENS_NAME.MAIN_STACK)} />
     </View>
   )
 }
