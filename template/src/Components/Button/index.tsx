@@ -1,7 +1,7 @@
 import { StyleSheet, TouchableOpacityProps, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { scale } from 'react-native-size-scaling'
-import { COLORS } from '@/Themes'
+import { Colors, FontFamily, FontSize } from '@/Themes'
 import { CText } from '@/Components'
 
 interface Props extends TouchableOpacityProps {
@@ -12,7 +12,7 @@ const CButton: React.FC<Props> = props => {
   const { title = 'Button', ...restProps } = props
   return (
     <TouchableOpacity style={styles.container} {...restProps}>
-      <CText color={'#fff'}>{title}</CText>
+      <CText style={styles.title}>{title}</CText>
     </TouchableOpacity>
   )
 }
@@ -24,8 +24,14 @@ const styles = StyleSheet.create({
     height: scale(48),
     width: '100%',
     paddingHorizontal: scale(20),
-    backgroundColor: COLORS.PRIMARY,
+    backgroundColor: Colors.primary,
     justifyContent: 'center',
     alignItems: 'center',
+    borderRadius: 8,
+  },
+  title: {
+    color: '#fff',
+    fontFamily: FontFamily.bold,
+    fontSize: FontSize.medium,
   },
 })
