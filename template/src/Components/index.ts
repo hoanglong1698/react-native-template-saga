@@ -1,3 +1,6 @@
 export { default as CText } from './Text'
 export { default as CButton } from './Button'
 export { default as Switch } from './Switch'
+export { default as CTextInput } from './TextInput'
+export { default as Checkbox } from './Checkbox'
+export { default as Header } from './Header'

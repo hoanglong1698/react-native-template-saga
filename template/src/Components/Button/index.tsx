@@ -1,4 +1,4 @@
-import { StyleSheet, TouchableOpacityProps, TouchableOpacity } from 'react-native'
+import { StyleSheet, TouchableOpacityProps, TouchableOpacity, ViewStyle } from 'react-native'
 import React from 'react'
 import { scale } from 'react-native-size-scaling'
 import { Colors, FontFamily, FontSize } from '@/Themes'
@@ -6,12 +6,13 @@ import { CText } from '@/Components'
 
 interface Props extends TouchableOpacityProps {
   title: string
+  style?: ViewStyle
 }
 
 const CButton: React.FC<Props> = props => {
-  const { title = 'Button', ...restProps } = props
+  const { title = 'Button', style, ...restProps } = props
   return (
-    <TouchableOpacity style={styles.container} {...restProps}>
+    <TouchableOpacity style={[styles.container, style]} {...restProps}>
       <CText style={styles.title}>{title}</CText>
     </TouchableOpacity>
   )

@@ -56,9 +56,6 @@
 		<string>Inter-Italic.ttf</string>
 		<string>Inter-Regular.ttf</string>
 		<string>Inter-SemiBold.ttf</string>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
 		<string>AntDesign.ttf</string>
 		<string>Entypo.ttf</string>
 		<string>EvilIcons.ttf</string>
