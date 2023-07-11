@@ -2,7 +2,7 @@ import { StyleSheet, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { Colors } from '@/Themes'
-import CText from '../Text'
+import { CText } from '@/Components'
 
 interface Props {
   label: string

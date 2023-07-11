@@ -1,6 +1,6 @@
-import { StyleSheet, TouchableOpacity, View } from 'react-native'
+import { Keyboard, StyleSheet, TouchableOpacity, TouchableWithoutFeedback, View } from 'react-native'
 import React, { useState } from 'react'
-import { CButton, CText, CTextInput, Checkbox } from '@/Components'
+import { CButton, CText, CTextInput, Checkbox, DismissKeyboardView } from '@/Components'
 import { SCREENS_NAME } from '@/Constants'
 import { reset } from '@/Utils'
 import { Colors } from '@/Themes'
@@ -9,7 +9,7 @@ export default function LoginScreen() {
   const [state, setState] = useState(false)
 
   return (
-    <View style={styles.container}>
+    <DismissKeyboardView style={styles.container}>
       <CText bold fontSize={32}>
         Log in
       </CText>
@@ -35,7 +35,7 @@ export default function LoginScreen() {
         <Checkbox label="Remember me" />
       </View>
       <CButton style={styles.loginButton} title="Login" onPress={() => reset(SCREENS_NAME.MAIN_STACK)} />
-    </View>
+    </DismissKeyboardView>
   )
 }
 

@@ -5,7 +5,7 @@ import { Header } from '@/Components'
 export default function ProfileScreen() {
   return (
     <View>
-      <Header />
+      <Header title="Profile" />
     </View>
   )
 }

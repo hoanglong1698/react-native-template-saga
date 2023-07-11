@@ -5,10 +5,10 @@ export const FontFamily = {
 }
 
 export const FontSize = {
-  medium: 16,
+  xs: 8,
+  small: 12,
   regular: 14,
-  small: 13,
-  tiny: 8,
+  medium: 16,
 }
 
 export const FontStyle = {

@@ -1,4 +1,4 @@
-import { StyleSheet, TouchableOpacityProps, TouchableOpacity, ViewStyle } from 'react-native'
+import { StyleSheet, TouchableOpacityProps, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { scale } from 'react-native-size-scaling'
 import { Colors, FontFamily, FontSize } from '@/Themes'
@@ -6,7 +6,6 @@ import { CText } from '@/Components'
 
 interface Props extends TouchableOpacityProps {
   title: string
-  style?: ViewStyle
 }
 
 const CButton: React.FC<Props> = props => {
