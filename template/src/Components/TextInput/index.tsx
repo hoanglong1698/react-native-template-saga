@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     height: DEFAULT_HEIGHT,
     borderWidth: 1,
     width: '100%',
-    borderColor: Colors.catskillWhite,
+    borderColor: Colors.common.catskillWhite,
     borderRadius: 8,
     paddingHorizontal: 10,
   },

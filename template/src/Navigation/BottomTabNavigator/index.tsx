@@ -6,12 +6,17 @@ import { SCREENS_NAME } from '@/Constants'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { Colors, FontSize } from '@/Themes'
 import { CText } from '@/Components'
+import { useTheme } from '@/Hooks'
+import { ITheme } from '@/Types'
 
 const BottomTab = createBottomTabNavigator()
 
 export default function BottomTabNavigator() {
+  const { theme } = useTheme()
+  const styles = getStyles(theme)
+
   const tabBarIcon = ({ focused, label, iconName }: { focused: boolean; label: string; iconName: string }) => {
-    const color = focused ? Colors.primary : Colors.mischka
+    const color = focused ? Colors[theme].primary : Colors.common.mischka
 
     return (
       <View style={styles.iconContainer}>
@@ -41,6 +46,7 @@ export default function BottomTabNavigator() {
         options={{
           tabBarShowLabel: false,
           tabBarIcon: ({ focused }) => tabBarIcon({ focused, label, iconName }),
+          tabBarStyle: styles.tabBarStyle,
         }}
       />
     )
@@ -54,9 +60,13 @@ export default function BottomTabNavigator() {
   )
 }
 
-const styles = StyleSheet.create({
-  iconContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-})
+const getStyles = (theme: ITheme) =>
+  StyleSheet.create({
+    iconContainer: {
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    tabBarStyle: {
+      backgroundColor: Colors[theme].background,
+    },
+  })

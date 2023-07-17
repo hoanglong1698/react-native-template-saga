@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { Colors } from '@/Themes'
 import { CText } from '@/Components'
+import { useTheme } from '@/Hooks'
 
 interface Props {
   label: string
@@ -10,6 +11,7 @@ interface Props {
 
 const Checkbox: React.FC<Props> = props => {
   const { label = 'Checkbox' } = props
+  const { theme } = useTheme()
   const [checked, setChecked] = useState(false)
 
   const onPress = () => setChecked(prev => !prev)
@@ -19,8 +21,8 @@ const Checkbox: React.FC<Props> = props => {
       <View
         style={{
           ...styles.boxContainer,
-          borderColor: checked ? Colors.primary : Colors.catskillWhite,
-          backgroundColor: checked ? Colors.primary : Colors.white,
+          borderColor: checked ? Colors[theme].primary : Colors.common.catskillWhite,
+          backgroundColor: checked ? Colors[theme].primary : Colors.common.white,
         }}>
         <Ionicons name="checkmark" size={20} color={'#fff'} />
       </View>

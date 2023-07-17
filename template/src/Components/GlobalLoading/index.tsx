@@ -45,7 +45,7 @@ export default GlobalLoading
 const styles = StyleSheet.create({
   container: {
     alignSelf: 'center',
-    backgroundColor: Colors.white,
+    backgroundColor: Colors.common.white,
     paddingVertical: 20,
     flexDirection: 'row',
     alignItems: 'center',

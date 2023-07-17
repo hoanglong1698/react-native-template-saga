@@ -1,2 +1,2 @@
-export * from './CommonConstants'
-export * from './ProfileConstants'
+export * from './CommonConstant'
+export * from './ProfileConstant'
