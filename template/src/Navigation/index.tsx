@@ -6,12 +6,15 @@ import { SCREENS_NAME } from '@/Constants'
 import AuthStackNavigator from './AuthStackNavigator'
 import BottomTabNavigator from './BottomTabNavigator'
 import { navigationRef } from '@/Utils'
+import RNBootSplash from 'react-native-bootsplash'
 
 const Stack = createNativeStackNavigator()
 
 export default function Navigation() {
+  const onReady = () => RNBootSplash.hide()
+
   return (
-    <NavigationContainer ref={navigationRef}>
+    <NavigationContainer ref={navigationRef} onReady={onReady}>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name={SCREENS_NAME.AUTH_STACK} component={AuthStackNavigator} />
         <Stack.Screen name={SCREENS_NAME.MAIN_STACK} component={BottomTabNavigator} />
