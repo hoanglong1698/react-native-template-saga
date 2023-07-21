@@ -11,7 +11,7 @@ import RNBootSplash from 'react-native-bootsplash'
 const Stack = createNativeStackNavigator()
 
 export default function Navigation() {
-  const onReady = () => RNBootSplash.hide()
+  const onReady = () => RNBootSplash.hide({ fade: true })
 
   return (
     <NavigationContainer ref={navigationRef} onReady={onReady}>

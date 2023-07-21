@@ -1,4 +1,4 @@
-import { Keyboard, StyleSheet, TouchableOpacity, TouchableWithoutFeedback, View } from 'react-native'
+import { Keyboard, StatusBar, StyleSheet, TouchableOpacity, TouchableWithoutFeedback, View } from 'react-native'
 import React, { useState } from 'react'
 import { CButton, CText, CTextInput, Checkbox, DismissKeyboardView } from '@/Components'
 import { SCREENS_NAME } from '@/Constants'
@@ -10,6 +10,7 @@ export default function LoginScreen() {
 
   return (
     <DismissKeyboardView style={styles.container}>
+      <StatusBar backgroundColor={'transparent'} barStyle={'dark-content'} translucent />
       <CText bold fontSize={32}>
         Log in
       </CText>

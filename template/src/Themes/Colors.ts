@@ -1,5 +1,5 @@
 const LightColors = {
-  primary: '#617EEA',
+  primary: '#006FFD',
   background: '#FFFFFF',
   text: '#000000',
   success: '#28a745',
@@ -7,7 +7,7 @@ const LightColors = {
 }
 
 const DarkColors = {
-  primary: '#617EEA',
+  primary: '#006FFD',
   background: '#000000',
   text: '#FFFFFF',
   success: '#28a745',
