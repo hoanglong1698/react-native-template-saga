@@ -1,5 +1,5 @@
-import { Keyboard, StyleSheet, TouchableWithoutFeedback, View, ViewProps } from 'react-native'
 import React from 'react'
+import { Keyboard, StyleSheet, TouchableWithoutFeedback, View, ViewProps } from 'react-native'
 
 interface Props extends ViewProps {}
 

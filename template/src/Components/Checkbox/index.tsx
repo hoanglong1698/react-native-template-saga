@@ -1,9 +1,10 @@
-import { StyleSheet, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
+import { StyleSheet, TouchableOpacity, View } from 'react-native'
 import Ionicons from 'react-native-vector-icons/Ionicons'
-import { Colors } from '@/Themes'
+
 import { CText } from '@/Components'
 import { useTheme } from '@/Hooks'
+import { Colors } from '@/Themes'
 
 interface Props {
   label: string

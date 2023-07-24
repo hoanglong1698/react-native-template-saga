@@ -1,12 +1,14 @@
-import { StyleSheet } from 'react-native'
-import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { SCREENS_NAME } from '@/Constants'
+import React from 'react'
+import { StyleSheet } from 'react-native'
+import RNBootSplash from 'react-native-bootsplash'
+
 import AuthStackNavigator from './AuthStackNavigator'
 import BottomTabNavigator from './BottomTabNavigator'
+
+import { SCREENS_NAME } from '@/Constants'
 import { navigationRef } from '@/Utils'
-import RNBootSplash from 'react-native-bootsplash'
 
 const Stack = createNativeStackNavigator()
 

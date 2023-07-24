@@ -1,5 +1,6 @@
-import { Text, TextProps } from 'react-native'
 import React from 'react'
+import { Text, TextProps } from 'react-native'
+
 import { FontFamily } from '@/Themes'
 
 interface Props extends TextProps {

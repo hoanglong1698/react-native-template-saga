@@ -1,6 +1,7 @@
-import { ITheme } from '@/Types'
 import React from 'react'
+
 import { useTheme } from '@/Hooks'
+import { ITheme } from '@/Types'
 
 type Generator<T extends {}> = (theme: ITheme) => T
 

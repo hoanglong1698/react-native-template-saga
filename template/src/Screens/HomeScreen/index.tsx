@@ -1,10 +1,11 @@
-import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { useTranslation } from 'react-i18next'
+import { StyleSheet, Text, View } from 'react-native'
+
 import { CButton, globalLoading } from '@/Components'
 import { useTheme, useThemedStyles } from '@/Hooks'
-import { ITheme } from '@/Types'
 import { Colors } from '@/Themes'
-import { useTranslation } from 'react-i18next'
+import { ITheme } from '@/Types'
 
 export default function HomeScreen() {
   const { theme, toggleTheme } = useTheme()

@@ -1,12 +1,13 @@
 import React from 'react'
-import Navigation from '@/Navigation'
-import { SafeAreaProvider } from 'react-native-safe-area-context'
-import { ThemeProvider, GlobalLoading, globalLoadingRef } from '@/Components'
 import { I18nextProvider } from 'react-i18next'
-import i18n from '@/Languages'
-import { Provider } from 'react-redux'
-import { store } from '@/Redux/Store'
 import { StatusBar } from 'react-native'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
+import { Provider } from 'react-redux'
+
+import { ThemeProvider, GlobalLoading, globalLoadingRef } from '@/Components'
+import i18n from '@/Languages'
+import Navigation from '@/Navigation'
+import { store } from '@/Redux/Store'
 
 export default function App() {
   return (

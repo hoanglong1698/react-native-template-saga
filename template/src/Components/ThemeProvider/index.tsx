@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+
 import { ITheme, IThemeContext } from '@/Types'
 
 export const ThemeContext = React.createContext<IThemeContext>({ theme: 'light', toggleTheme: () => null })

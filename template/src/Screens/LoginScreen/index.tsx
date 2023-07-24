@@ -1,9 +1,10 @@
-import { Keyboard, StatusBar, StyleSheet, TouchableOpacity, TouchableWithoutFeedback, View } from 'react-native'
 import React, { useState } from 'react'
+import { Keyboard, StatusBar, StyleSheet, TouchableOpacity, TouchableWithoutFeedback, View } from 'react-native'
+
 import { CButton, CText, CTextInput, Checkbox, DismissKeyboardView } from '@/Components'
 import { SCREENS_NAME } from '@/Constants'
-import { reset } from '@/Utils'
 import { Colors } from '@/Themes'
+import { reset } from '@/Utils'
 
 export default function LoginScreen() {
   const [state, setState] = useState(false)

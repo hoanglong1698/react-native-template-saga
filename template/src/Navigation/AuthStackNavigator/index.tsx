@@ -1,5 +1,6 @@
-import * as React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import React from 'react'
+
 import { SCREENS_NAME } from '@/Constants'
 import { LoginScreen } from '@/Screens'
 

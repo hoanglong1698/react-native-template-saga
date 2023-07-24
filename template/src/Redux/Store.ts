@@ -1,8 +1,9 @@
-import { MiddlewareArray, combineReducers, configureStore } from '@reduxjs/toolkit'
-import reduxSaga, { settingReducer } from '@/Redux'
 import AsyncStorage from '@react-native-async-storage/async-storage'
+import { MiddlewareArray, combineReducers, configureStore } from '@reduxjs/toolkit'
 import { persistReducer, persistStore } from 'redux-persist'
 import createSagaMiddleware from 'redux-saga'
+
+import reduxSaga, { settingReducer } from '@/Redux'
 
 const rootReducer = combineReducers({
   setting: settingReducer,

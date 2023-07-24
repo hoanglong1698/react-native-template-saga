@@ -1,10 +1,11 @@
-import { StyleSheet, View } from 'react-native'
 import React from 'react'
+import { StyleSheet, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { Colors } from '@/Themes'
+
 import { CText } from '@/Components'
-import { ITheme } from '@/Types'
 import { useThemedStyles } from '@/Hooks'
+import { Colors } from '@/Themes'
+import { ITheme } from '@/Types'
 
 interface Props {
   title: string

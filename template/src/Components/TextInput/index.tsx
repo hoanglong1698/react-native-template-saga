@@ -1,5 +1,6 @@
-import { StyleSheet, TextInput, View, TextInputProps, ViewStyle } from 'react-native'
 import React, { useState } from 'react'
+import { StyleSheet, TextInput, View, TextInputProps, ViewStyle } from 'react-native'
+
 import { Colors, FontFamily } from '@/Themes'
 
 interface Props extends Omit<TextInputProps, 'style'> {

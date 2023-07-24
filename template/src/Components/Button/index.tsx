@@ -1,10 +1,11 @@
-import { StyleSheet, TouchableOpacityProps, TouchableOpacity } from 'react-native'
 import React from 'react'
+import { StyleSheet, TouchableOpacity, TouchableOpacityProps } from 'react-native'
 import { scale } from 'react-native-size-scaling'
-import { Colors, FontFamily, FontSize } from '@/Themes'
+
 import { CText } from '@/Components'
-import { ITheme } from '@/Types'
 import { useThemedStyles } from '@/Hooks'
+import { Colors, FontFamily, FontSize } from '@/Themes'
+import { ITheme } from '@/Types'
 
 interface Props extends TouchableOpacityProps {
   title: string

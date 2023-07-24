@@ -1,12 +1,13 @@
-import { StyleSheet, View } from 'react-native'
-import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { HomeScreen, ProfileScreen } from '@/Screens'
-import { SCREENS_NAME } from '@/Constants'
+import React from 'react'
+import { StyleSheet, View } from 'react-native'
 import Ionicons from 'react-native-vector-icons/Ionicons'
-import { Colors, FontSize } from '@/Themes'
+
 import { CText } from '@/Components'
+import { SCREENS_NAME } from '@/Constants'
 import { useTheme } from '@/Hooks'
+import { HomeScreen, ProfileScreen } from '@/Screens'
+import { Colors, FontSize } from '@/Themes'
 import { ITheme } from '@/Types'
 
 const BottomTab = createBottomTabNavigator()

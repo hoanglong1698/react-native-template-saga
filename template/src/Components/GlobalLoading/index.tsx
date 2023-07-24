@@ -1,10 +1,11 @@
-import { StyleSheet, View } from 'react-native'
 import React, { useImperativeHandle, useState } from 'react'
-import Modal from 'react-native-modal'
+import { StyleSheet, View } from 'react-native'
 import { UIActivityIndicator } from 'react-native-indicators'
-import { Colors } from '@/Themes'
-import { CText } from '@/Components'
+import Modal from 'react-native-modal'
 import { scale } from 'react-native-size-scaling'
+
+import { CText } from '@/Components'
+import { Colors } from '@/Themes'
 
 interface Props {}
 

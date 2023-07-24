@@ -1,12 +1,13 @@
-import { FlatList, StyleSheet, View } from 'react-native'
 import React from 'react'
-import { CText, Header } from '@/Components'
-import Ionicons from 'react-native-vector-icons/Ionicons'
-import { Colors, FontSize } from '@/Themes'
-import { MENU_PROFILE } from '@/Constants'
+import { FlatList, StyleSheet, View } from 'react-native'
 import { TouchableOpacity } from 'react-native'
-import { ITheme } from '@/Types'
+import Ionicons from 'react-native-vector-icons/Ionicons'
+
+import { CText, Header } from '@/Components'
+import { MENU_PROFILE } from '@/Constants'
 import { useThemedStyles } from '@/Hooks'
+import { Colors, FontSize } from '@/Themes'
+import { ITheme } from '@/Types'
 
 export default function ProfileScreen() {
   const styles = useThemedStyles(createStyles)
