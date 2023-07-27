@@ -3,6 +3,7 @@ import { MiddlewareArray, combineReducers, configureStore } from '@reduxjs/toolk
 import { persistReducer, persistStore } from 'redux-persist'
 import createSagaMiddleware from 'redux-saga'
 
+import { ReactotronConfig } from '@/Configs'
 import reduxSaga, { settingReducer } from '@/Redux'
 
 const rootReducer = combineReducers({
@@ -22,6 +23,7 @@ const sagaMiddleware = createSagaMiddleware()
 export const store = configureStore({
   reducer: persistedReducer,
   middleware: __DEV__ ? new MiddlewareArray().concat(sagaMiddleware) : [sagaMiddleware],
+  enhancers: __DEV__ ? [ReactotronConfig.createEnhancer!()] : undefined,
 })
 
 export const persistor = persistStore(store)
