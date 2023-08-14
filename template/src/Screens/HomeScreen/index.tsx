@@ -1,8 +1,8 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 
-import { CButton, globalLoading } from '@/Components'
+import { CButton, CText, globalLoading } from '@/Components'
 import { useTheme, useThemedStyles } from '@/Hooks'
 import { Colors } from '@/Themes'
 import { ITheme } from '@/Types'
@@ -14,8 +14,8 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.container}>
-      <Text>HomeScreen</Text>
-      <Text>{t('home:welcome')}</Text>
+      <CText>HomeScreen</CText>
+      <CText>{t('home:welcome')}</CText>
       <CButton title="Show Modal" onPress={() => globalLoading.show()} />
       <CButton title={`Change Theme ${theme}`} style={styles.button} onPress={() => toggleTheme()} />
     </View>

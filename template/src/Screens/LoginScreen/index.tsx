@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
-import { Keyboard, StatusBar, StyleSheet, TouchableOpacity, TouchableWithoutFeedback, View } from 'react-native'
+import React from 'react'
+import { StatusBar, StyleSheet, TouchableOpacity, View } from 'react-native'
 
 import { CButton, CText, CTextInput, Checkbox, DismissKeyboardView } from '@/Components'
 import { SCREENS_NAME } from '@/Constants'
+import { useTheme } from '@/Hooks'
 import { Colors } from '@/Themes'
+import { ITheme } from '@/Types'
 import { reset } from '@/Utils'
 
 export default function LoginScreen() {
-  const [state, setState] = useState(false)
+  const { theme } = useTheme()
 
   return (
     <DismissKeyboardView style={styles.container}>
@@ -21,7 +23,7 @@ export default function LoginScreen() {
           Email
         </CText>
         <TouchableOpacity>
-          <CText bold color={Colors.primary}>
+          <CText bold color={Colors[theme].primary}>
             Login with mobile
           </CText>
         </TouchableOpacity>

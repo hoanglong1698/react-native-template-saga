@@ -1,13 +1,10 @@
 import React, { useImperativeHandle, useState } from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View, Modal, StatusBar } from 'react-native'
 import { UIActivityIndicator } from 'react-native-indicators'
-import Modal from 'react-native-modal'
 import { scale } from 'react-native-size-scaling'
 
 import { CText } from '@/Components'
 import { Colors } from '@/Themes'
-
-interface Props {}
 
 export const globalLoadingRef = React.createRef<any>()
 
@@ -31,12 +28,15 @@ const GlobalLoading = React.forwardRef((props, ref) => {
   })
 
   return (
-    <Modal isVisible={isVisible} animationIn={'fadeIn'} animationOut={'fadeOut'}>
+    <Modal visible={isVisible} transparent>
+      <StatusBar backgroundColor={'rgba(0,0,0,0.6)'} />
       <View style={styles.container}>
-        <View>
-          <UIActivityIndicator size={24} />
+        <View style={styles.contentContainer}>
+          <View>
+            <UIActivityIndicator size={24} />
+          </View>
+          <CText style={styles.text}>Loading...</CText>
         </View>
-        <CText style={styles.text}>Loading...</CText>
       </View>
     </Modal>
   )
@@ -45,6 +45,12 @@ export default GlobalLoading
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(0,0,0,0.6)',
+  },
+  contentContainer: {
     alignSelf: 'center',
     backgroundColor: Colors.common.white,
     paddingVertical: 20,
