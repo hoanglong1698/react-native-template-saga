@@ -1,3 +1,5 @@
+export * from './usePushNotification'
 export { default as useBackHandler } from './useBackHandler'
+export { default as usePushNotification } from './usePushNotification'
 export { default as useTheme } from './useTheme'
 export { default as useThemedStyles } from './useThemedStyles'

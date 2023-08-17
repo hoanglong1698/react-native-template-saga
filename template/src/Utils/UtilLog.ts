@@ -1,7 +1,7 @@
 import Reactotron from 'reactotron-react-native'
 
 const isLogEnable = __DEV__
-const useReactotron = true
+const useReactotron = false
 
 export function connectConsoleToReactotron() {
   if (!useReactotron) {

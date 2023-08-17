@@ -3,13 +3,13 @@ import { StatusBar, StyleSheet, TouchableOpacity, View } from 'react-native'
 
 import { CButton, CText, CTextInput, Checkbox, DismissKeyboardView } from '@/Components'
 import { SCREENS_NAME } from '@/Constants'
-import { useTheme } from '@/Hooks'
+import { usePushNotification, useTheme } from '@/Hooks'
 import { Colors } from '@/Themes'
-import { ITheme } from '@/Types'
 import { reset } from '@/Utils'
 
 export default function LoginScreen() {
   const { theme } = useTheme()
+  usePushNotification()
 
   return (
     <DismissKeyboardView style={styles.container}>
