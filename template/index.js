@@ -11,6 +11,7 @@ import { name as appName } from './app.json'
 
 import { onMessageReceive, onPressNotification } from '@/Hooks'
 import 'react-native-get-random-values'
+import 'react-native-gesture-handler'
 import { connectConsoleToReactotron } from '@/Utils'
 
 if (__DEV__) {
