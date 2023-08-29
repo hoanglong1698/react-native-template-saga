@@ -21,7 +21,7 @@ public class MainActivity extends ReactActivity {
   //react-native-screens override
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        RNBootSplash.init(this); 
+        RNBootSplash.init(this, R.style.BootTheme);
         super.onCreate(null);
   }
 

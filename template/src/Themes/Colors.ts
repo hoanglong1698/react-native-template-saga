@@ -8,7 +8,7 @@ const LightColors = {
 
 const DarkColors = {
   primary: '#006FFD',
-  background: '#000000',
+  background: '#2A2A44',
   text: '#FFFFFF',
   success: '#28a745',
   error: '#dc3545',

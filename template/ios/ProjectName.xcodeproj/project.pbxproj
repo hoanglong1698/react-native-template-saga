@@ -16,6 +16,7 @@
 		AFC46735AAEC46E9944D85DB /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1CD1BC757FF49B2BAB70564 /* Inter-Regular.ttf */; };
 		B97F7D40967D41F08E76DD6F /* Inter-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F733620672D6473182E31BBE /* Inter-Italic.ttf */; };
 		DB11F4032A71172D00C71A4A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB11F4022A71172D00C71A4A /* GoogleService-Info.plist */; };
+		DB6A23922A9DF63500390150 /* SplashColor.colorset in Resources */ = {isa = PBXBuildFile; fileRef = DB6A23912A9DF63500390150 /* SplashColor.colorset */; };
 		DBF603E72A651773003D30F7 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF603E62A651773003D30F7 /* BootSplash.storyboard */; };
 		E06DC4A19D174C15BE12C7C3 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CF3C6864EE846428FAF5C3D /* Inter-SemiBold.ttf */; };
 		F676B07D791594F639709B3E /* Pods_ProjectName_ProjectNameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DDCDC1758E5E9E7A5E7E3D /* Pods_ProjectName_ProjectNameTests.framework */; };
@@ -51,6 +52,7 @@
 		95903313AC060370C9D46ADB /* Pods_ProjectName.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectName.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1CD1BC757FF49B2BAB70564 /* Inter-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Regular.ttf"; path = "../assets/fonts/Inter-Regular.ttf"; sourceTree = "<group>"; };
 		DB11F4022A71172D00C71A4A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DB6A23912A9DF63500390150 /* SplashColor.colorset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SplashColor.colorset; path = ProjectName/Images.xcassets/SplashColor.colorset; sourceTree = "<group>"; };
 		DBF4FF522A7121A700EB73D5 /* ProjectName.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = ProjectName.entitlements; path = ProjectName/ProjectName.entitlements; sourceTree = "<group>"; };
 		DBF603E62A651773003D30F7 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = ProjectName/BootSplash.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -97,6 +99,7 @@
 		13B07FAE1A68108700A75B9A /* ProjectName */ = {
 			isa = PBXGroup;
 			children = (
+				DB6A23912A9DF63500390150 /* SplashColor.colorset */,
 				DBF4FF522A7121A700EB73D5 /* ProjectName.entitlements */,
 				DB11F4022A71172D00C71A4A /* GoogleService-Info.plist */,
 				DBF603E62A651773003D30F7 /* BootSplash.storyboard */,
@@ -276,6 +279,7 @@
 				AFC46735AAEC46E9944D85DB /* Inter-Regular.ttf in Resources */,
 				E06DC4A19D174C15BE12C7C3 /* Inter-SemiBold.ttf in Resources */,
 				DB11F4032A71172D00C71A4A /* GoogleService-Info.plist in Resources */,
+				DB6A23922A9DF63500390150 /* SplashColor.colorset in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
