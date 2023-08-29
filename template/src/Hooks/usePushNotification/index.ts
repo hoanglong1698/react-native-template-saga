@@ -27,6 +27,7 @@ const requestFCMPermission = async () => {
       name: DEFAULT_CHANNEL.NAME,
       importance: AndroidImportance.HIGH,
     })
+    await notifee.setBadgeCount(0)
     const fcmToken = await messaging().getToken()
     console.log('fcmToken', fcmToken)
   }
@@ -100,8 +101,8 @@ const usePushNotification = () => {
     })
 
     return () => {
-      unsubFirebaseOnMessage()
-      unsubNotifeeForeground()
+      unsubFirebaseOnMessage
+      unsubNotifeeForeground
     }
   }, [])
 }

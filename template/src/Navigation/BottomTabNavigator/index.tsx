@@ -3,8 +3,9 @@ import React from 'react'
 import { StyleSheet, View } from 'react-native'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
+import { ScreensName } from '../NavigationHelpers'
+
 import { CText } from '@/Components'
-import { SCREENS_NAME } from '@/Constants'
 import { useTheme } from '@/Hooks'
 import { HomeScreen, ProfileScreen } from '@/Screens'
 import { Colors, FontSize } from '@/Themes'
@@ -55,8 +56,8 @@ export default function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator screenOptions={{ headerShown: false }}>
-      {renderBottomTab({ name: SCREENS_NAME.HOME, component: HomeScreen, label: 'Home', iconName: 'home' })}
-      {renderBottomTab({ name: SCREENS_NAME.PROFILE, component: ProfileScreen, label: 'Profile', iconName: 'person' })}
+      {renderBottomTab({ name: ScreensName.Home, component: HomeScreen, label: 'Home', iconName: 'home' })}
+      {renderBottomTab({ name: ScreensName.Profile, component: ProfileScreen, label: 'Profile', iconName: 'person' })}
     </BottomTab.Navigator>
   )
 }
