@@ -2,15 +2,16 @@ import { StackActions, createNavigationContainerRef } from '@react-navigation/na
 
 export const navigationRef = createNavigationContainerRef()
 
-export function reset(screen, params) {
+export function reset(screen: string, params?: any) {
   navigationRef.current?.reset({
     index: 0,
     routes: [{ name: screen, params }],
   })
 }
 
-export function navigate(name, params) {
+export function navigate(name: string, params?: any) {
   if (navigationRef.isReady()) {
+    //@ts-ignore
     navigationRef.current?.navigate(name, params)
   }
 }
@@ -19,25 +20,26 @@ export function goBack() {
   navigationRef.current?.goBack()
 }
 
-export function replace(name, params) {
+export function replace(name: string, params?: any) {
   navigationRef.current?.dispatch(StackActions.replace(name, params))
 }
 
-export function push(name, params) {
+export function push(name: string, params?: any) {
   navigationRef.current?.dispatch(StackActions.push(name, params))
 }
 
-export function pop(params) {
+export function pop(params: any) {
   navigationRef.current?.dispatch(StackActions.pop(params))
 }
 
 export function getCurrentRoute() {
-  let state = navigationRef.current?.getRootState()
-  let currentRoute = { screen_name: '', screen_class: '' }
-  const routeState = state?.routes[state.index]?.state
-  currentRoute = {
-    screen_name: routeState?.routes[routeState.index]?.name,
-    screen_class: state?.routes[state.index]?.name,
-  }
-  return currentRoute
+  return navigationRef.getCurrentRoute()
+}
+
+export const ScreensName = {
+  AuthStack: 'AuthStack',
+  Login: 'Login',
+  MainStack: 'MainStack',
+  Home: 'Home',
+  Profile: 'Profile',
 }

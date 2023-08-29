@@ -2,10 +2,9 @@ import React from 'react'
 import { StatusBar, StyleSheet, TouchableOpacity, View } from 'react-native'
 
 import { CButton, CText, CTextInput, Checkbox, DismissKeyboardView } from '@/Components'
-import { SCREENS_NAME } from '@/Constants'
 import { usePushNotification, useTheme } from '@/Hooks'
+import { ScreensName, reset } from '@/Navigation'
 import { Colors } from '@/Themes'
-import { reset } from '@/Utils'
 
 export default function LoginScreen() {
   const { theme } = useTheme()
@@ -38,7 +37,7 @@ export default function LoginScreen() {
       <View>
         <Checkbox label="Remember me" />
       </View>
-      <CButton style={styles.loginButton} title="Login" onPress={() => reset(SCREENS_NAME.MAIN_STACK)} />
+      <CButton style={styles.loginButton} title="Login" onPress={() => reset(ScreensName.MainStack)} />
     </DismissKeyboardView>
   )
 }
